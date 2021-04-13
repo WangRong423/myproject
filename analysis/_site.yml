@@ -5,10 +5,8 @@ navbar:
   left:
   - text: Home
     href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+  - text: scRNA-analysis
+    href: scRNA-analysis.html
   right:
   - icon: fa-github
     text: Source code
