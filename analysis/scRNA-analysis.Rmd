@@ -7,15 +7,11 @@ editor_options:
   chunk_output_type: console
 ---
 
-#dog olfactory scRNA atlas
+# dog olfactory scRNA atlas
 ## overview of the single-cell RNA-seq data
 
-![ ](1.png)
+![ ](/home/rongwang/myproject/analysis/1.png)
 ## technical effects were corrected by CCA
 
-![before](2.png)
-![after](3.png)
-```{r}
-
-```
-
+![before](/home/rongwang/myproject/analysis/2.png)
+![after](/home/rongwang/myproject/analysis/3.png)
