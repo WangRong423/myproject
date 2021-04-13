@@ -8,5 +8,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
-Click on this [link](scRNA-analysis.html) to see my results.
+Welcome to our research website.
+
+This website host the data analysis result of the scRNA-seq of dog olfactory study.
