@@ -10,8 +10,9 @@ editor_options:
 # dog olfactory scRNA atlas
 ## overview of the single-cell RNA-seq data
 
-![ ](/home/rongwang/myproject/analysis/1.png)
+![ ](1.png)
+
 ## technical effects were corrected by CCA
 
-![before](/home/rongwang/myproject/analysis/2.png)
-![after](/home/rongwang/myproject/analysis/3.png)
+![before](2.png)
+![after](3.png)
