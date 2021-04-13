@@ -1,0 +1,21 @@
+---
+title: "scRNA-analysis"
+author: "WangRong423"
+date: "2021-04-13"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+#dog olfactory scRNA atlas
+## overview of the single-cell RNA-seq data
+
+![ ](1.png)
+## technical effects were corrected by CCA
+
+![before](2.png)
+![after](3.png)
+```{r}
+
+```
+
