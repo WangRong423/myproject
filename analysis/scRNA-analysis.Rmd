@@ -16,3 +16,36 @@ editor_options:
 
 ![before](2.png)
 ![after](3.png)
+
+```
+  
+  library(Seurat)
+library(cowplot)
+library(ggplot2)
+library(Matrix)
+library(dplyr)
+library(umap)
+polyT.data<-readRDS(file="/gpfs/home/limanman/result/olf_dog/new/normoliazed_polyT.rds")
+random.data <- readRDS(file = "/gpfs/home/limanman/result/olf_dog/new/normoliazed_random.rds")
+
+two.species <- FindIntegrationAnchors(object.list = list(polyT.data, random.data), dims = 1:50)
+two.combined <- IntegrateData(anchorset = two.species, dims = 1:50)
+DefaultAssay(two.combined) <- "integrated"
+saveRDS(two.combined,file="/gpfs/home/limanman/result/olf_dog/new/integrated_polyT+random10.28.rds")
+
+
+two.combined< readRDS(file="/gpfs/home/limanman/result/olf_dog/new/integrated_polyT+random11.3.rds")
+pdf(file = "two.combined11.3_1.pdf")
+dog.olf <- ScaleData(two.combined, verbose = FALSE)
+dog.olf <- RunPCA(dog.olf, npcs = 50, verbose = FALSE)
+ElbowPlot(object =dog.olf , ndims = 50)
+dev.off ()
+
+pdf(file = "two.combined11.3_2.pdf")
+dog.olf <- FindNeighbors(dog.olf, reduction = "pca", dims = 1:20)
+dog.olf <- FindClusters(dog.olf, resolution = 0.3)
+dog.olf <- RunUMAP(dog.olf, reduction = "pca", dims = 1:20)
+DimPlot(dog.olf, reduction = "umap", group.by = "orig.ident")+ggtitle("batch effect removal")
+DimPlot(dog.olf, reduction = "umap", label = TRUE)
+dev.off ()
+```
