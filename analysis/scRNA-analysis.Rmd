@@ -17,9 +17,11 @@ editor_options:
 ![before](2.png)
 ![after](3.png)
 
-```
-  
-  library(Seurat)
+
+<details>
+  <summary>code</summary>
+  <pre><code> 
+library(Seurat)
 library(cowplot)
 library(ggplot2)
 library(Matrix)
@@ -48,4 +50,5 @@ dog.olf <- RunUMAP(dog.olf, reduction = "pca", dims = 1:20)
 DimPlot(dog.olf, reduction = "umap", group.by = "orig.ident")+ggtitle("batch effect removal")
 DimPlot(dog.olf, reduction = "umap", label = TRUE)
 dev.off ()
-```
+  </code></pre>
+</details>
